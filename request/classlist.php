@@ -49,13 +49,25 @@
 
           public function UpdateList($name,$color,$id){
 
-            $stmt = $this->db_connect()->prepare("UPDATE list SET  name= ?, color = ?  WHERE id_list = $id ");
 
-            $stmt->execute(array($name,$color));
+            $query="UPDATE list SET  name= '".$name."',color ='".$color."'  WHERE id_list = ".$id;
+            $this->db_connect()->query($query);
 
             header('location:lists.php');
             exit();
           }
+
+          public function DeleteList($id){
+
+            $stmt = $this->db_connect()->prepare("DELETE FROM list WHERE id_list= ?");
+
+            $stmt->execute(array($id));
+
+            header('location:lists.php');
+            exit();
+          }
+
+
 
 
 

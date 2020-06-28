@@ -28,7 +28,6 @@
 
           <li class="active"><a href="Home.php"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="lists.php"><i class="bx bx-user"></i> <span>Lists</span></a></li>
-          <li><a href="task.php"><i class="bx bx-file-blank"></i> <span>Tasks</span></a></li>
           <li><a href="facts.php"><i class="bx bx-server"></i>Our Facts</a></li>
           <li><a href="UserProfile.php"><i class="bx bx-envelope"></i> Your Profile -></a></li>
           <li><a href="login.php"><i class="bx bx-book-content"></i> Log In </a></li>

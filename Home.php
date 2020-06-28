@@ -3,7 +3,7 @@
 <?php include "includes/dashboard.php" ?>
 
 
-<?php include("session.php") ?>
+<?php include("session.php"); ?>
 
   <main id="main">
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background: url('assets/img/<?php echo $_SESSION['photo'];?>');background-size:cover;width: 100%;">
@@ -36,7 +36,7 @@
                 ?>
             <div class="testimonial-item" data-aos="fade-up">
 
-              <img src="assets/img/testimonials/<?php echo $photo; ?>" class="testimonial-img" alt="">
+              <img src="assets/img/<?php echo $photo; ?>" class="testimonial-img" alt="">
               <h3><?php echo $firstname."-".$lastname; ?></h3>
               <h4><?php echo $function; ?></h4>
             </div>

@@ -9,6 +9,18 @@
           public $photo;
           public $function;
 
+          public function userProfile(){
+
+            $query = "SELECT * FROM users where id_user like ".$_SESSION['id_user'];
+
+            $result = $this->db_connect()->query($query);
+            $row = array();
+                while ($data = $result->fetch()) {
+                        $row[] = $data;
+                  }
+                  return $row;
+          }
+
           public function otherusers(){
 
             $query = "SELECT * FROM users where id_user not like ".$_SESSION['id_user'];
@@ -19,6 +31,26 @@
                         $row[] = $data;
                   }
                   return $row;
+          }
+
+          public function allUsers(){
+
+            $query = "SELECT count(id_user) FROM users";
+
+            $result = $this->db_connect()->query($query);
+            $data = $result->fetchAll();
+
+                  return $data;
+          }
+
+          public function allList(){
+
+            $query = "SELECT count(id_list) FROM list";
+
+            $result = $this->db_connect()->query($query);
+            $data = $result->fetchAll();
+
+                  return $data;
           }
 
           public function login($username,$password){
